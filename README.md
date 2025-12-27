@@ -122,7 +122,12 @@ This project was built to:
 - Email alerts for low stock
 - Dockerized deployment
 
-------------------------------------------------------------
+--------------------------------------------------------
+🎥DEMO VIDEO
+
+https://github.com/user-attachments/assets/f1ebbd2a-e1bd-4527-b5a4-b1ade714fced
+
+--------------------------------------------------------
 
 👩‍💻 AUTHOR
 Manusri D
