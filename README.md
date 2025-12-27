@@ -1,82 +1,130 @@
-# 📔 MyDiary.write – A Personal Digital Journal
+# 📦 Inventory Management System
 
-MyDiary.write is a secure and expressive full-stack journaling application
-that allows users to write, store, and explore personal and public posts —
-all while maintaining privacy.
+Inventory Management System is a full-stack web application designed to help
+businesses efficiently track, manage, and analyze their inventory in real time.
 
-With a clean UI, emoji support, image uploads, and authentication,
-MyDiary.write blends simplicity and functionality for modern diary-keeping.
+The system provides secure authentication, product management, stock tracking,
+and reporting — all through a clean, professional dashboard interface.
 
 ------------------------------------------------------------
 
 🌟 FEATURES
 
-📝 Create private diary entries  
-🌍 Create public / anonymous posts  
-🔐 Secure user registration & login  
-🔑 Password reset support  
-🖼️ Attach a single image to each post  
-😊 Emoji support in posts  
-✏️ Edit & delete your own entries  
-🧾 Dedicated detailed post view  
-📰 Feed page for browsing public posts  
-🔒 Access control based on user ownership  
+🔐 User Authentication (Register & Login using JWT)  
+📦 Add, update, and delete inventory products  
+📊 Real-time stock level monitoring  
+⚠️ Low stock & out-of-stock detection  
+🔄 Update product quantity instantly  
+🗑️ Delete products securely  
+📈 Dashboard with key inventory metrics  
+📋 Dedicated products management page  
+📄 Reports page with inventory insights  
+⬇️ Export inventory data as CSV  
+🚪 Secure logout functionality  
+
+------------------------------------------------------------
+
+📊 DASHBOARD METRICS
+
+- Total Products (SKUs)
+- Low Stock Items
+- Out of Stock Items
+- Dead Stock (Overstocked items)
+- Healthy Stock Overview
 
 ------------------------------------------------------------
 
 🛠️ TECH STACK
 
 Frontend:
-- HTML
-- CSS
+- Next.js
+- React
 - JavaScript
+- Inline CSS (custom styled components)
 
 Backend:
 - Node.js
 - Express.js
+- JWT Authentication
+- bcryptjs (password hashing)
 
 Database:
-- MySQL
+- MySQL (Aiven Cloud Database)
 
-Authentication:
+Deployment:
+- Backend hosted on Render
+- Database hosted on Aiven
+- Environment variables managed securely
+
+------------------------------------------------------------
+
+🔐 AUTHENTICATION & SECURITY
+
 - JWT-based authentication
-- Secure password handling
+- Protected backend routes
+- Authorization header required for inventory actions
+- Environment variables (.env) excluded from version control
+- GitHub secret scanning handled securely
+
+------------------------------------------------------------
+
+📁 PROJECT STRUCTURE
+
+inventory-system/
+│
+├── backend/
+│   ├── routes/
+│   ├── controllers/
+│   ├── db.js
+│   ├── index.js
+│
+├── frontend/
+│   ├── pages/
+│   ├── components/
+│   ├── styles/
+│
+├── .gitignore
+├── package.json
+└── README.md
 
 ------------------------------------------------------------
 
 🎯 PURPOSE
 
-MyDiary.write is designed to:
-- Encourage consistent journaling
-- Provide a safe digital space for thoughts
-- Allow optional anonymous expression
-- Serve as a real-world full-stack project
+This project was built to:
+- Simulate a real-world inventory management workflow
+- Practice full-stack development with authentication
+- Learn cloud database integration (Aiven)
+- Gain deployment experience using Render
+- Build a strong resume-ready project
 
 ------------------------------------------------------------
 
-🧠 DESIGN PHILOSOPHY
+🧠 ASSUMPTIONS & DESIGN DECISIONS
 
-- Simple, distraction-free UI
-- Privacy-first approach
-- Minimal but expressive features
-- Beginner-friendly yet production-ready architecture
+- Single-user login session per browser
+- Inventory belongs to authenticated users only
+- Name field in user table is optional (not used in dashboard logic)
+- Stock movement logic based on reorder levels
+- Simple UI prioritized over heavy UI libraries
+- Backend-first deployment approach for reliability
 
 ------------------------------------------------------------
 
 🌱 FUTURE ENHANCEMENTS
 
-- Multiple image support
-- Tags & categories
-- Search & filters
-- Mood tracking
-- Rich text editor
-- Deployment on cloud platform
+- Role-based access (Admin / Staff)
+- Multiple warehouses support
+- Product categories & tags
+- Search & advanced filters
+- Pagination for large inventories
+- Graph-based analytics
+- Email alerts for low stock
+- Dockerized deployment
 
 ------------------------------------------------------------
 
 👩‍💻 AUTHOR
-
-Built with care as a full-stack learning project
-focused on real-world features and deployment readiness.
+Manusri D
 
 ------------------------------------------------------------
