@@ -109,9 +109,11 @@ These rules are **intentionally simple, transparent, and configurable**, making 
 🔴 Out of Stock
 Condition: 
 quantity === 0
+
 🟠 Low Stock
 Condition:
 quantity > 0 AND quantity < reorder_level
+
 🟢 Healthy Stock
 Condition:  
 quantity ≥ reorder_level AND quantity ≤ (reorder_level × 3)
