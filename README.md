@@ -1,4 +1,4 @@
-# 📦 Inventory Management System
+### 📦 Inventory Management System
 
 Inventory Management System is a full-stack web application designed to help
 businesses efficiently track, manage, and analyze their inventory in real time.
@@ -8,7 +8,7 @@ and reporting — all through a clean, professional dashboard interface.
 
 ------------------------------------------------------------
 
-🌟 FEATURES
+### 🌟 FEATURES
 
 🔐 User Authentication (Register & Login using JWT)  
 📦 Add, update, and delete inventory products  
@@ -24,7 +24,7 @@ and reporting — all through a clean, professional dashboard interface.
 
 ------------------------------------------------------------
 
-📊 DASHBOARD METRICS
+### 📊 DASHBOARD METRICS
 
 - Total Products (SKUs)
 - Low Stock Items
@@ -34,7 +34,7 @@ and reporting — all through a clean, professional dashboard interface.
 
 ------------------------------------------------------------
 
-🛠️ TECH STACK
+### 🛠️ TECH STACK
 
 Frontend:
 - Next.js
@@ -58,7 +58,7 @@ Deployment:
 
 ------------------------------------------------------------
 
-🔐 AUTHENTICATION & SECURITY
+### 🔐 AUTHENTICATION & SECURITY
 
 - JWT-based authentication
 - Protected backend routes
@@ -68,7 +68,7 @@ Deployment:
 
 ------------------------------------------------------------
 
-📁 PROJECT STRUCTURE
+### 📁 PROJECT STRUCTURE
 
 inventory-system/
 │
@@ -89,29 +89,49 @@ inventory-system/
 
 ------------------------------------------------------------
 
-🎯 PURPOSE
+### 🎯 PURPOSE
 
 This project was built to:
 - Simulate a real-world inventory management workflow
 - Practice full-stack development with authentication
-- Learn cloud database integration (Aiven)
-- Gain deployment experience using Render
 - Build a strong resume-ready project
 
 ------------------------------------------------------------
 
-🧠 ASSUMPTIONS & DESIGN DECISIONS
+### 🧠 ASSUMPTIONS & DESIGN DECISIONS
 
-- Single-user login session per browser
-- Inventory belongs to authenticated users only
-- Name field in user table is optional (not used in dashboard logic)
-- Stock movement logic based on reorder levels
-- Simple UI prioritized over heavy UI libraries
-- Backend-first deployment approach for reliability
+📊 Inventory Status Logic & Assumptions
+
+To provide clear and actionable inventory insights, this system categorizes products into **Out of Stock**, **Low Stock**, **Healthy Stock**, and **Dead Stock** based on practical assumptions.
+
+These rules are **intentionally simple, transparent, and configurable**, making the system easy to understand and extend.
+
+🔴 Out of Stock
+Condition: 
+quantity === 0
+🟠 Low Stock
+Condition:
+quantity > 0 AND quantity < reorder_level
+🟢 Healthy Stock
+Condition:  
+quantity ≥ reorder_level AND quantity ≤ (reorder_level × 3)
+
+🟣 Dead Stock
+Condition: 
+quantity > (reorder_level × 3)
 
 ------------------------------------------------------------
 
-🌱 FUTURE ENHANCEMENTS
+
+### ⚙️ Design Assumptions
+- `reorder_level` is defined per product based on expected demand.
+- The multiplier (`× 3`) is an assumed heuristic, not a hard business rule.
+- These thresholds can be easily adjusted in the frontend or backend logic.
+- The goal is to provide early signals, not financial predictions.
+
+------------------------------------------------------------
+
+### 🌱 FUTURE ENHANCEMENTS
 
 - Role-based access (Admin / Staff)
 - Multiple warehouses support
@@ -123,13 +143,14 @@ This project was built to:
 - Dockerized deployment
 
 --------------------------------------------------------
-🎥DEMO VIDEO
+### 🎥DEMO VIDEO
 
 https://github.com/user-attachments/assets/f1ebbd2a-e1bd-4527-b5a4-b1ade714fced
 
 --------------------------------------------------------
 
-👩‍💻 AUTHOR
+### 👩‍💻 AUTHOR
+
 Manusri D
 
 ------------------------------------------------------------
